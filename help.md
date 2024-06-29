@@ -1,0 +1,1 @@
+- `npx create-react-app gym_exercises`
