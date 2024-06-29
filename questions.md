@@ -1,0 +1,1 @@
+- when we install libraries, it will show 6 vulnerabilities found, what does it mean?
