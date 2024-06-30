@@ -40,7 +40,7 @@ Checkout the most effective exercises
         color="#ff2625"
         sx={{
             opacity:0.1,
-            display:{lg:'block'},xs:'none'
+            display:{lg:'block',xs:'none'}
         }}
         fontSize="200px"
         >
