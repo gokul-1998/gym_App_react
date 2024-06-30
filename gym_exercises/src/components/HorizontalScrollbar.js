@@ -34,10 +34,10 @@ const HorizontalScrollbar = ({data,bodyPart,setBodyPart}) => {
     <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
       {data.map((item)=>(<Box
         key={item.id||item}
-        itemId={item.id||item}
+        itemID={item.id||item}
         title={item.id||item}
-        p={{sm:'20px 30px',xs:'10px 10px'}}
-        m="0px 40px">
+        p={{sm:'20px 0px',xs:'10px 10px'}}
+        mt="0px 40px">
             <BodyPart item={item} 
             setBodyPart={setBodyPart} bodyPart={bodyPart}/>
             </Box>
