@@ -7,7 +7,6 @@ import Logo from '../assets/images/Logo.png';
 
 const Navbar = () => {
   return (
-    <div>
       <Stack direction='row' justifyContent='space-around' 
       sx={{gap:{sm:'122px',xs:'40px'},
         mt:{sm:'32px',xs:'20px'},justifyContent:'none'
@@ -34,7 +33,6 @@ const Navbar = () => {
 
         </Stack>
         </Stack>
-    </div>
   )
 }
 

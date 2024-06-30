@@ -7,3 +7,7 @@
 
 
 - pages will have more than one component
+
+- you need this for horizontal styles
+
+`import 'react-horizontal-scrolling-menu/dist/styles.css';`
