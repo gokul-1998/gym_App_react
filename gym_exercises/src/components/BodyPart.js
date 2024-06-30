@@ -22,10 +22,11 @@ const BodyPart = ({item,setBodyPart,bodyPart}) => {
     
       }
     }
+    onClick={()=>{setBodyPart(item)}}
     
     >
        
-        <img src={Icon} alt='dumbell' style={{
+        <img src={Icon} alt='dumbell' style={{margin:'20px',
             width:'40px', height:'40px' }}
             
             />
