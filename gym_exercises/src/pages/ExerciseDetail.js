@@ -11,6 +11,10 @@ import SimilarExercises from '../components/SimilarExercises'
 const ExerciseDetail = () => {
   const [exerciseDetail,setExerciseDetail]=useState({})
   const [exerciseVideos,setExerciseVideo]=useState([])
+  const [targetMuscleExercises,setTargetMuscleExercises]=useState([])
+  const [equipmentExercises,setEquipmentMuscleExercises]=useState([])
+
+
   const {id}=useParams()
 
 
@@ -27,6 +31,12 @@ const ExerciseDetail = () => {
         `${youtubeSearchUrl}/search?query=${exerciseDetailData.name}`,youtubeOptions
       );
       setExerciseVideo(exerciseVideosData.contents)
+
+      const targetMuscleExercisesData=await fetchData(`${exerciseDbUrl}/exercises/target/${exerciseDetailData.target}`,exerciseOptions);
+      setTargetMuscleExercises(targetMuscleExercisesData)
+      const equipmentExercisesData=await fetchData(`${exerciseDbUrl}/exercises/equipment/${exerciseDetailData.equipment}`,exerciseOptions);
+      setEquipmentMuscleExercises(equipmentExercisesData)
+
     }
     fetchExerciseDetail();
   },[id])
@@ -35,9 +45,14 @@ const ExerciseDetail = () => {
     <Box>
       <Detail exerciseDetail={exerciseDetail}/>
       <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name}/>
-      <SimilarExercises/>
+      {targetMuscleExercises.length}
+      <SimilarExercises targetMuscleExercises={targetMuscleExercises} equipmentExercises={equipmentExercises}/>
 
+    <Typography>
+    {targetMuscleExercises.length}
+    </Typography>
     </Box>
+      
   )
 }
 
